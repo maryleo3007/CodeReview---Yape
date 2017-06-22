@@ -147,6 +147,10 @@ CAROUSEL
     display: none;
 }
 
+#carousel .owl-dot.active span {
+    background: #f64552
+}
+
 
 /*
 BUTTON

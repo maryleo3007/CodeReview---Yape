@@ -3,7 +3,7 @@
 const Home = (update) => {
     const section = $('<section class="container"></section>');
 
-    const divSlide = $('<div class="slide owl-carousel owl-theme"></div>');
+    const divSlide = $('<div id="carousel" class="slide owl-carousel owl-theme"></div>');
 
     const figOne = $('<figure></figure>');
     const img1 = $('<img src="img/icons/icon-people.png" />');
