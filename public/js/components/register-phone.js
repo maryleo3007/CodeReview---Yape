@@ -6,7 +6,7 @@ const RegOne = (update) => {
     const step = $('<div class="step"></div>');
     const icon = $('<img src="img/icons/phone.png"/>');
     const divText = $('<div class="page-text"></div>');
-    const h4 = $('<h4>Para comenzar validemos tu <br>número</h4>');
+    const h4 = $('<h4>Para comenzar validemos tu número</h4>');
     const p = $('<p>Recibirás un SMS con un código de validación</p>');
     divText.append(h4);
     divText.append(p);
@@ -17,18 +17,31 @@ const RegOne = (update) => {
     const divInput = $('<div class="div-input"></div>');
     const iIcon = $('<img src="img/icons/phoneandnumber.png">');
     const input = $('<input type="tel" name="reg-phone" id="tel" class="form-input" maxlength="9" required/>');
+    const error = $('<p class="error" ></p>');
     const box = $('<input type="checkbox" name="terms" id="terms" class="checkbox required"> <span>Acepto los <a href="#">Términos y Condiciones</a></span>');
     const button = $('<button type="submit" class="btn" disabled>Continuar</button>');
     divInput.append(iIcon);
     divInput.append(input);
     form.append(divInput);
+    form.append(error);
     form.append(box);
     form.append(button);
 
-    //Solo números
+
+    form.change(function() {
+            if (input.val().length == 9 && box.prop('checked')) {
+                button.prop('disabled', false)
+            } else {
+                button.prop('disabled', true);
+            }
+
+        })
+        //Solo números
     input.NumberOnly();
 
-    input.on('keyup', () => {
+    /*input.on('keyup', () => {
+        error.html('');
+
         const valInput = input.val();
         const vb = box.is(':checked');
         if (valInput.length === 9 && vb == true) {
@@ -54,7 +67,7 @@ const RegOne = (update) => {
             state.phone = null;
             button.attr('disabled');
         }
-    });
+    });*/
 
     button.on('click', (e) => {
         e.preventDefault();
@@ -63,12 +76,16 @@ const RegOne = (update) => {
             "phone": state.phone,
             "terms": state.term
         }, (result) => {
-            if (result.succes != false) {
+            console.log(result);
+            if (result.success == true) {
                 state.code = result.data.code;
                 console.log(state.code);
                 state.page = 2;
                 update();
+            } else if (result.message == "El número ya existe") {
+                error.html('<small>' + result.message + '</small>');
             }
+
         });
     });
 

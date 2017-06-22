@@ -65,8 +65,8 @@ STEP on every page
 }
 
 .step p {
-    font-size: 0.85rem;
-    line-height: 1.3rem;
+    font-size: 0.8rem;
+    /*line-height: 1.3rem;*/
     margin-bottom: 1.1rem;
 }
 
@@ -112,6 +112,16 @@ INPUT WITH IMAGE
 .div-input input:focus {
     outline: 0;
     background: none;
+}
+
+
+/*
+SPAN DE ERROR
+*/
+
+.error {
+    color: #f64552;
+    font-style: italic;
 }
 
 
@@ -173,7 +183,7 @@ PAGE 2 / REGISTER-PHONE.js
 
 .register button {
     display: block;
-    margin: 0 auto;
+    margin: 4rem auto 0 auto;
 }
 
 .register .div-input img {
