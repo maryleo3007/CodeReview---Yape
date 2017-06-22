@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: sans-serif;
+}
+
+
+/*
+===================
+COMMON
+===================
+*/
+
+.container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.btn {
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fbd43b;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    text-transform: uppercase;
+    padding: .8rem;
+}
+
+.btn:disabled {
+    background-color: #8f8f8f;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-green {
+    color: #00c3a3;
+}
+
+.text-grey {
+    color: #8f8f8f;
+}
+
+.text-darkgrey {
+    color: #212121;
+}
+
+
+/*
+STEP on every page
+*/
+
+.step img {
+    width: 30%;
+    margin-bottom: 0.5rem;
+}
+
+.step h4 {
+    line-height: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.step p {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    margin-bottom: 1.1rem;
+}
+
+
+/*
+FORM
+*/
+
+form {
+    margin: 0 auto;
+}
+
+
+/*
+INPUT WITH IMAGE
+*/
+
+.div-input {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-bottom: 1px solid #fbd43b;
+    width: 80%;
+    margin: 0 auto 15px auto;
+    padding-bottom: 5px;
+}
+
+.div-input img {
+    display: inline-block;
+    min-height: 1px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.div-input input {
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    padding-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.div-input input:focus {
+    outline: 0;
+    background: none;
+}
+
+
+/*
+===================
+PAGE 1 / HOME.js
+===================
+*/
+
+
+/*
+CAROUSEL
+*/
+
+.owl-stage-outer {
+    margin-bottom: 1.1rem !important;
+}
+
+.owl-carousel .owl-item img {
+    width: 60% !important;
+    margin: 1.1rem auto;
+}
+
+.owl-item h3 {
+    margin: 1.1rem
+}
+
+.owl-item p {
+    line-height: 1.5rem;
+}
+
+.owl-nav {
+    display: none;
+}
+
+
+/*
+BUTTON
+*/
+
+.btn-register {
+    width: 85%;
+}
+
+
+/*
+===================
+PAGE 2 / REGISTER-PHONE.js
+===================
+*/
+
+.register form {
+    text-align: center;
+}
+
+.register button {
+    display: block;
+    margin: 0 auto;
+}
+
+.register .div-input img {
+    width: 25%;
+}
+
+.register #terms {
+    width: 15px;
+    height: 15px;
+    border-radius: 15%;
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 0.7rem;
+}
+
+.register span {
+    font-size: .8rem;
+    margin-bottom: 7px;
+}
+
+.register a {
+    color: #00c3a3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/*
+===================
+PAGE 3 / CODE.js
+===================
+*/
+
+.code .div-input img {
+    width: 8%;
+}
+
+.code p {
+    font-size: .8rem;
+}
+
+.code p img {
+    width: 7%;
+    margin-top: 2px;
+}
+
+
+/*
+===================
+PAGE 4 / REGISTER-USER.js
+===================
+*/
+
+.register-user .div-input img {
+    width: 8%;
+}
+
+
+/*
+===================
+PAGE 5 / YELLOW.js
+===================
+*/
+
+.yellow {
+    margin-top: -5%;
+    max-width: 100%;
+    height: 140vh;
+    max-height: 100%;
+    background-color: #fbd43b;
+}
+
+.div-yellow {
+    margin: 40% auto;
+    text-align: center;
+}
+
+.div-yellow img,
+.div-yellow h5,
+.div-yellow p {
+    display: block;
+    margin: 5px auto;
+}
+
+.div-yellow img {
+    width: 40%;
+}
+
+
+/*
+===================
+PAGE 6 / REGISTER-CARD-NUMBER.js
+===================
+*/
