@@ -8,8 +8,10 @@ const Code = (update) => {
     const divText = $('<div class="page-text"></div>');
     const h4 = $('<h4>Ahora ingresa tu código/h4>');
     const p = $('<p>Enviamos un SMS con el código de validación <br>al número <strong>' + state.phone + '</strong></p>');
+    const code = $('<p class="error" >El codigo generado es:'+state.code+'</p>');
     divText.append(h4);
     divText.append(p);
+    divText.append(code);
     step.append(icon);
     step.append(divText);
 
@@ -39,6 +41,7 @@ const Code = (update) => {
         count -= 1;
         if (count == 0) {
             count = 21;
+
         }
         $('#timer-clock').text(count);
     }, 1000);
@@ -50,6 +53,7 @@ const Code = (update) => {
         }, (result) => {
             if (result.succes != false) {
                 state.code = result.data;
+                code.html('El nuevo código generado es: '+state.code);
                 console.log(state.code);
             }
         });
