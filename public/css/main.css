@@ -19,7 +19,7 @@ COMMON
 }
 
 .btn {
-    margin: 0 auto;
+    margin: 10% auto;
     border-radius: 5px;
     background-color: #fbd43b;
     color: #fff;
@@ -27,6 +27,7 @@ COMMON
     border: 0;
     text-transform: uppercase;
     padding: .8rem;
+    width: 90%;
 }
 
 .btn:disabled {
@@ -90,7 +91,7 @@ INPUT WITH IMAGE
     justify-content: space-around;
     border-bottom: 1px solid #fbd43b;
     width: 80%;
-    margin: 0 auto 15px auto;
+    margin: 50px auto 15px auto;
     padding-bottom: 5px;
 }
 
@@ -198,6 +199,14 @@ PAGE 2 / REGISTER-PHONE.js
     padding: 0;
     font-size: 0.7rem;
 }
+
+/*#terms{
+  background: #00c3a3 url('img/icons/check-symbol.png');
+  background-image: url();
+  border-radius: 15%;
+  padding: 5px;
+  border: 2px solid #ededed;
+}*/
 
 .register span {
     font-size: .8rem;

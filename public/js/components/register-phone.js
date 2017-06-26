@@ -29,16 +29,29 @@ const RegOne = (update) => {
 
 
     form.change(function() {
-            if (input.val().length == 9 && box.prop('checked')) {
-                button.prop('disabled', false)
-            } else {
-                button.prop('disabled', true);
-            }
+      const valInput = input.val();
+      const vb = box.is(':checked');
+      if (input.val().length == 9 && box.prop('checked')) {
+          state.phone = valInput;
+          state.term = vb;
+          button.prop('disabled', false)
+      } else {
+          state.phone = null;
+          state.term = false;
+          button.prop('disabled', true);
+      }
 
-        })
+    })
         //Solo números
     input.NumberOnly();
 
+    input.on('keyup', () => {
+        error.html('');
+        if (input.val().length < 10) {
+            button.prop('disabled', true);
+            $( "#terms" ).prop( "checked", false );
+        }
+    });
     /*input.on('keyup', () => {
         error.html('');
 
@@ -82,7 +95,7 @@ const RegOne = (update) => {
                 console.log(state.code);
                 state.page = 2;
                 update();
-            } else if (result.message == "El número ya existe") {
+            } else {
                 error.html('<small>' + result.message + '</small>');
             }
 
